@@ -19,5 +19,5 @@ export class App {
     return "Santosh";
   }
 
-  title = signal('Angular Tutorial: Interpolation with signals');
+  title = signal('Interpolation with signals');
 }
