@@ -1,0 +1,230 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+/* Main background */
+.counter-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+
+  background:
+    radial-gradient(circle at top left, #6a5acd 0, transparent 35%),
+    radial-gradient(circle at bottom right, #00bcd4 0, transparent 35%),
+    linear-gradient(135deg, #111827, #1e1b4b);
+}
+
+/* Counter card */
+.counter-card {
+  width: 420px;
+  padding: 45px 35px;
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.35),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+
+  color: white;
+}
+
+/* Icon */
+.icon {
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 32px;
+
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading */
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+/* Number display */
+.count-box {
+  width: 100%;
+  padding: 25px;
+
+  margin-bottom: 30px;
+
+  border-radius: 22px;
+
+  background: rgba(0, 0, 0, 0.2);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  box-shadow:
+    inset 0 4px 15px rgba(0, 0, 0, 0.2),
+    0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.count {
+  display: block;
+
+  font-size: 70px;
+  font-weight: 800;
+
+  line-height: 1;
+
+  color: white;
+
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.3),
+    0 0 30px rgba(99, 102, 241, 0.5);
+
+  transition: transform 0.2s ease;
+}
+
+/* Buttons container */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Common button */
+.btn {
+  flex: 1;
+
+  min-height: 75px;
+
+  border: none;
+  border-radius: 18px;
+
+  color: white;
+
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 3px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+}
+
+/* Button symbols */
+.btn span {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+/* Button labels */
+.btn small {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+/* Plus */
+.plus {
+  background: linear-gradient(135deg, #10b981, #059669);
+
+  box-shadow:
+    0 8px 20px rgba(16, 185, 129, 0.3);
+}
+
+/* Reset */
+.reset {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+
+  box-shadow:
+    0 8px 20px rgba(99, 102, 241, 0.3);
+}
+
+/* Minus */
+.minus {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+
+  box-shadow:
+    0 8px 20px rgba(239, 68, 68, 0.3);
+}
+
+/* Hover effect */
+.btn:hover {
+  transform: translateY(-5px);
+  filter: brightness(1.1);
+}
+
+/* Click effect */
+.btn:active {
+  transform: translateY(1px) scale(0.97);
+}
+
+/* Footer */
+.footer-text {
+  margin-top: 28px;
+
+  font-size: 12px;
+
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .counter-container {
+    padding: 15px;
+  }
+
+  .counter-card {
+    width: 100%;
+    padding: 35px 20px;
+  }
+
+  h1 {
+    font-size: 27px;
+  }
+
+  .count {
+    font-size: 60px;
+  }
+
+  .buttons {
+    gap: 8px;
+  }
+
+  .btn {
+    min-height: 68px;
+  }
+}

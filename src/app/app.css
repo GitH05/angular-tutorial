@@ -1,5 +1,150 @@
-h1 {
-    background-color: #b58e8e;  
-    text-align: center;
-    font-size: 20px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  min-height: 100vh;
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at 10% 20%, #4f46e5 0, transparent 25%),
+    radial-gradient(circle at 90% 80%, #0891b2 0, transparent 25%),
+    linear-gradient(135deg, #0f172a, #1e1b4b);
+
+  color: white;
+}
+
+/* Header */
+.app-header {
+  text-align: center;
+  padding: 35px 20px 10px;
+}
+
+/* Header icon */
+.header-icon {
+  width: 55px;
+  height: 55px;
+
+  margin: 0 auto 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 25px;
+
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Marquee */
+.marquee-wrapper {
+  max-width: 900px;
+  margin: auto;
+
+  padding: 12px 0;
+
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.2),
+    inset 0 1px rgba(255, 255, 255, 0.15);
+}
+
+.marquee-wrapper marquee {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.marquee-wrapper span {
+  display: inline-block;
+
+  color: white;
+
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.4),
+    0 0 25px rgba(99, 102, 241, 0.7);
+}
+
+.separator {
+  margin: 0 40px;
+
+  color: #a5b4fc !important;
+
+  text-shadow:
+    0 0 10px #818cf8 !important;
+}
+
+/* Welcome text */
+.welcome-text {
+  margin-top: 15px;
+
+  font-size: 14px;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  letter-spacing: 1px;
+}
+
+/* Counter spacing */
+main {
+  padding: 5px 20px 20px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+
+  padding: 15px;
+
+  font-size: 12px;
+
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Floating animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+  .app-header {
+    padding-top: 20px;
+  }
+
+  .marquee-wrapper marquee {
+    font-size: 24px;
+  }
+
+  .separator {
+    margin: 0 20px;
+  }
+
+  .welcome-text {
+    font-size: 12px;
+  }
 }
