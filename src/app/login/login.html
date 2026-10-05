@@ -6,3 +6,12 @@
  allowing dynamic rendering of the image based on the value of imageUrl. -->
 
  <h2 [innerText]="'Count: ' + count()" (mouseenter)="count.set(count()+1)"></h2>
+ <!-- property binding:
+  [innerText]- html property
+  count()- signal: property value
+  
+  
+  event binding:
+  mouseenter- html event
+    count.set(count()+1)- signal: property value update
+  -->
