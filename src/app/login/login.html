@@ -1,2 +1,8 @@
 <p>login works!</p>
 <h1>{{ loginTitle }}</h1>
+<img [src]="imageUrl" alt="Login Image" width="1238" height="400" />
+<!-- // PROPERTY BINDING: imageUrl is a property that holds the URL of the image to be displayed in the login component. 
+ The [src] attribute in the template binds to this property, 
+ allowing dynamic rendering of the image based on the value of imageUrl. -->
+
+ <h2 [innerText]="'Count: ' + count()" (mouseenter)="count.set(count()+1)"></h2>
