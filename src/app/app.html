@@ -1,4 +1,27 @@
 <h1><marquee>{{var1}}</marquee></h1>
 
-<h4>{{count}}</h4>
-<button (click)="increment()">Increment</button>
+<hr>
+<p>OnClick Event</p>
+<p><span [style.color]="'brown'">{{counter()}}</span></p>
+<button (click)="handleClick()">Count ++</button>
+
+<hr>
+<p>OnInput Event</p>
+<input (input)="handleInput($event.target.value)">
+<p>Input: <span [style.color]="'blue'">{{name}}</span></p>
+
+<hr>
+<p>OnKeyUp Event</p>
+<input (keyup)="handleKeyUp($event)" placeholder="Type something...">
+<p>KeyUp: <span [style.color]="'green'">{{keyEvent}}</span></p>
+
+<hr>
+<div mouseover (mouseover)="handleMouseEvent($event)" (mouseout)="handleMouseEvent($event)">
+  <p>Hover over this text to trigger mouse events.</p>
+  <p>Mouse Event: <span [style.color]="'orange'">{{mouseEvent}}</span></p>
+</div>  
+
+<hr>
+<p>Blur Event</p>
+<input (blur)="handleBlurEvent($event)" (focus)="handleBlurEvent($event)" placeholder="Focus and then blur...">
+<p>Blur Event Triggered: <span [style.color]="'purple'">{{blurEvent}}</span></p>

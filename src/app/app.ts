@@ -7,15 +7,33 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.html',
 })
 export class App {
-  var1: string = 'Angular Tutorial: function call on Button click';
-  count = 0;
+  var1: string = 'Angular Tutorial: Event in Angular';
+  counter = signal(0);
+  name = "";
+  keyEvent = "";
+  mouseEvent = "";
+  blurEvent = "";
 
-  increment() {
-    console.log('Incrementing count: '+this.count);
-    this.count++;
-    this.greet(); // class component method call | `this` used
+  handleClick() {
+    this.counter.set(this.counter() + 1);
   }
-  greet() {
-    console.log('Hello from Angular!');
+
+  handleInput(event: string) {
+    this.name = event;
+  }
+
+  handleKeyUp(event: any) {
+    this.keyEvent = event.key;
+    console.log("KeyUp Event: " + event.key);
+  }
+
+  handleMouseEvent(event: any) {
+    this.mouseEvent = event.type;
+    console.log("Mouse Out Event: " + event.type);
+  }
+
+  handleBlurEvent(event: any) {
+    this.blurEvent = event.type;
+    console.log("Blur Event: " + event.type);
   }
 }
