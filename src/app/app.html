@@ -1,1 +1,20 @@
 <h1>{{ title }}</h1>
+<br>
+
+<h1>get value using function + event</h1>
+<input (input)="updateName($event.target.value)" placeholder="Enter your name">
+<br>
+<p>Your Input:- {{name}}</p>
+
+
+<br>
+<h1>get value using event</h1>
+<input (input)="city = $event.target.value" placeholder="Enter your city">
+<p>Your City:- {{city}}</p>
+
+
+<br>
+<h1>get value using Template Reference Variable</h1>  
+<input #userInput plceholder="Enter youre Email">
+<button (click)="getEmail(userInput.value)">get Email</button>
+<p>Your Email:- {{email}}</p>

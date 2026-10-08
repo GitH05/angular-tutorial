@@ -9,4 +9,17 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   title = 'Angular Tutorial';
+  name : string = "";
+  city : string = "";
+  email : string = "";
+
+
+  updateName(value:string) {
+    this.name = value;
+  }
+
+  getEmail(value: string){
+    this.email = value;
+  }
+
 }
