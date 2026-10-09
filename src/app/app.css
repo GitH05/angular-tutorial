@@ -1,5 +1,8 @@
+body {
+  background-color: #587097;
+}
+
 h1 {
-    background-color: #b58e8e;  
-    text-align: center;
-    font-size: 20px;
+  text-align: center;
+  color: brown;
 }

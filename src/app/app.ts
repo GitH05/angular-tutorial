@@ -1,25 +1,25 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Login } from './login/login';
-import {SignInComponent} from './signin/signin';
 
 @Component({
-  imports: [Login, SignInComponent],
   selector: 'app-root',
+  imports: [],
   styleUrl: './app.css',
   templateUrl: './app.html',
 })
 export class App {
-  var1: string = 'Angular Tutorial';
-  isAdmin: boolean = true;
+  title = 'Angular Tutorial';
+  name : string = "";
+  city : string = "";
+  email : string = "";
 
-  count = 5;
-  price = 199.99;
-  isLogin = true;
-  
-  getUser() {
-    return "Santosh";
+
+  updateName(value:string) {
+    this.name = value;
   }
 
-  title = signal('Interpolation with signals');
+  getEmail(value: string){
+    this.email = value;
+  }
+
 }
